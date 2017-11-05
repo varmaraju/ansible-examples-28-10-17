@@ -1,0 +1,11 @@
+---
+ - hosts: all
+   tasks:
+     - name: craeting the directory
+       file:
+        path: "{{dir_path}}"
+        state: directory
+       template:
+        src: /home/temp.j2
+        dest: /tmp/temp.conf
+       
